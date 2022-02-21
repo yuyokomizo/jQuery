@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+</head>
+<body>
+<p id="msg">横溝優</p>
+<button type="button" id="btn">名前の色を変える</button>
+	<!-- script要素 -->
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    "use strict";
+    $(function(){
+        $("#msg").css("color","blue");
+    })
+    $(function(){
+  var flg = "off";
+  $('#btn').on('click', function(){
+    if(flg == "off"){
+      $("#msg").css("color","red");
+      flg = "on";
+    }else{
+      $("#msg").css("color","blue");
+      flg = "off";
+    }
+  });
+});
+</script>
+</body>
+</html>
